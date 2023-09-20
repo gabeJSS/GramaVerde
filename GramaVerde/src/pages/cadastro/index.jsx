@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     img:{
         width: '15%',
         height: '6.85%',
-        marginTop: 65
+        marginTop: 65,
     },
     textobotao: {
         fontSize:30,
