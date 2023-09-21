@@ -17,9 +17,19 @@ export default function Perguntas1() {
             </View>
             <Checkbox
             Title= "Crack!"
-          value={isChecked}
-          onValueChange={setChecked}
+            color={'#9DD08E'}
+            value={isChecked}
+            onValueChange={setChecked}
+            style={styles.checkbox}
         />
+        <TouchableOpacity
+        style={styles.Botao}
+        onPress={()=> navigation.navigate('Perguntas2')}
+        >
+            <Text
+            style={styles.Texto}
+            >Próxima</Text>
+        </TouchableOpacity>
         </View>
     )
 }
@@ -36,6 +46,11 @@ const styles = StyleSheet.create({
       paddingRight: 20,
       paddingBottom: 20,
       paddingTop: 10,
+  },
+  checkbox:{
+    marginTop: 75,
+    marginRight: 200
+
   },
   fundo:{
       flex: 1,

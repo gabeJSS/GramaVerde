@@ -1,9 +1,11 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Checkbox from 'expo-checkbox';
+import React, { useState } from 'react';
 
-
-export default function Perguntas0() {
+export default function Perguntas2() {
     const navigation = useNavigation()
+    const [isChecked, setChecked] = useState(false);
     return(
         <View style={styles.container}>
             <Image 
@@ -11,12 +13,33 @@ export default function Perguntas0() {
         style={styles.img}
         />
             <View style={styles.fundo}>
-            <Text style={styles.Texto} > Faremos algumas 
-perguntas sobre sua vida financeira para aprimorar nossas capacidades de te auxiliar. </Text>
+            <Text style={styles.Texto} > Você possui dividas abertas? Elas estão sob controle? </Text>
             </View>
+            <Checkbox
+            Title= "Sim, estão sob controle"
+            color={'#9DD08E'}
+            value={isChecked}
+            onValueChange={setChecked}
+            style={styles.checkbox}
+        />
+            <Checkbox
+            Title= "Sim, não estão sob controle"
+            color={'#9DD08E'}
+            value={isChecked}
+            onValueChange={setChecked}
+            style={styles.checkbox}
+        />
+        <Checkbox
+            Title= "Não tenho dívidas"
+            color={'#9DD08E'}
+            value={isChecked}
+            onValueChange={setChecked}
+            style={styles.checkbox}
+        />
             <TouchableOpacity style={styles.Botao}
             onPress={ () => navigation.navigate('Perguntas1')}>
-                <Text style={styles.textobotao}> Vamos lá! </Text>
+            
+                <Text style={styles.textobotao}> Próxima </Text>
             </TouchableOpacity>
             
         </View>

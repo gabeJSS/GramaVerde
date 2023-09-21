@@ -2,8 +2,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 import Login from '../pages/login';
 import Cadastro from '../pages/cadastro';
-import perguntas0 from '../pages/perguntas0';
-import perguntas1 from '../pages/perguntas1';
+import Perguntas0 from '../pages/perguntas0';
+import Perguntas1 from '../pages/perguntas1';
+import Perguntas2 from '../pages/perguntas2';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,12 +24,17 @@ export default function Routes() {
             />
             <Stack.Screen 
             name="Perguntas0" 
-            component= { perguntas0 }
+            component= { Perguntas0 }
             options= { {headerShown: false} }
             />
             <Stack.Screen 
             name="Perguntas1" 
-            component= { perguntas1 }
+            component= { Perguntas1 }
+            options= { {headerShown: false} }
+            />
+            <Stack.Screen 
+            name="Perguntas2" 
+            component= { Perguntas2 }
             options= { {headerShown: false} }
             />
         </Stack.Navigator>
