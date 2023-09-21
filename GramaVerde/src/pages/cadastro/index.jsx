@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         paddingBottom: 20,
         paddingTop: 10,
+        fontFamily: 'Inter'
     },
     fundo:{
         flex: 1,

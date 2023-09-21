@@ -1,8 +1,11 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
+import { useFonts } from 'expo-font';
 
 export default function perguntas0() {
     const navigation = useNavigation()
+    const [fontsLoaded] = useFonts({
+        'Inter-Black': require('./src/assets/fonts/Inter-Black.otf'),});
     return(
         <View style={styles.container}>
             <Image 
@@ -99,6 +102,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 15,
     fontWeight: 'bold',
+    fontFamily: 'Inter-Black',
   }
 })
 
