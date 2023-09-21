@@ -1,10 +1,11 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
-
+import { useNavigation } from '@react-navigation/native';
+import Checkbox from 'expo-checkbox';
+import React, { useState } from 'react';
 
 export default function Perguntas1() {
     const navigation = useNavigation()
-    
+    const [isChecked, setChecked] = useState(false);
     return(
         <View style={styles.container}>
             <Image 
@@ -12,17 +13,15 @@ export default function Perguntas1() {
         style={styles.img}
         />
             <View style={styles.fundo}>
-            <Text style={styles.Texto} >É difícil você terminar o mês no verde?</Text>
+            <Text style={styles.Texto}>É difícil você terminar o mês no verde?</Text>
             </View>
-            <Checkbox/>
-            <Image 
-        source={require('../../assets/image.png')}
-        style={styles.imgFundo}
+            <Checkbox
+            Title= "Crack!"
+          value={isChecked}
+          onValueChange={setChecked}
         />
         </View>
     )
-    
-
 }
 
 const styles = StyleSheet.create({

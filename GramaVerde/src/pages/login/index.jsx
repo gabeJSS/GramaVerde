@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
     const navigation = useNavigation()

@@ -1,6 +1,5 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
-import { useFonts } from 'expo-font';
+import { useNavigation } from '@react-navigation/native';
 import { FontAwesome } from '@expo/vector-icons'; 
 
 export default function Cadastro() {
@@ -15,10 +14,6 @@ export default function Cadastro() {
         name='caret-left'
         />
         </TouchableOpacity>
-        <Image 
-        source={require('../../assets/leaf.png')}
-        style={styles.img}
-        />
         <View
         style={styles.fundo}>
         <Text style={styles.Titulo}>Cadastro</Text>
@@ -57,7 +52,7 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         paddingBottom: 20,
         paddingTop: 10,
-        f
+        
     },
     voltar:{
         color: '#fff',
