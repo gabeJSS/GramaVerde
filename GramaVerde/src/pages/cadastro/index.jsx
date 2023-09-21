@@ -1,12 +1,8 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-import { useFonts } from 'expo-font';
 
 export default function Cadastro() {
     const navigation = useNavigation()
-    const [fontsLoaded] = useFonts({
-        'Inter-Black': require('./assets/fonts/Inter-Black.otf'),
-    });
     return(
     <View style={styles.container}>
         <Image 

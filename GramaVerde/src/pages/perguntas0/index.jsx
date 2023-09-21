@@ -13,6 +13,10 @@ export default function perguntas0() {
             <Text style={styles.Texto} > Faremos algumas 
 perguntas sobre sua vida financeira para aprimorar nossas capacidades de te auxiliar. </Text>
             </View>
+            <TouchableOpacity
+            onPress={ () => navigation.navigate('')}>
+                <Text> Vamos lá! </Text>
+            </TouchableOpacity>
             <Image 
         source={require('../../assets/image.png')}
         style={styles.imgFundo}
