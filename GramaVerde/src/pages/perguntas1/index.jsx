@@ -1,7 +1,10 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-export default function perguntas0() {
+
+
+export default function Perguntas1() {
     const navigation = useNavigation()
+    
     return(
         <View style={styles.container}>
             <Image 
@@ -9,13 +12,9 @@ export default function perguntas0() {
         style={styles.img}
         />
             <View style={styles.fundo}>
-            <Text style={styles.Texto} > Faremos algumas 
-perguntas sobre sua vida financeira para aprimorar nossas capacidades de te auxiliar. </Text>
+            <Text style={styles.Texto} >É difícil você terminar o mês no verde?</Text>
             </View>
-            <TouchableOpacity style={styles.Botao}
-            onPress={ () => navigation.navigate('')}>
-                <Text style={styles.textobotao}> Vamos lá! </Text>
-            </TouchableOpacity>
+            <Checkbox/>
             <Image 
         source={require('../../assets/image.png')}
         style={styles.imgFundo}
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
       flex: 1,
       marginTop: 70,
       width: '84.88%',
-      maxHeight: '40%',
+      maxHeight: '25%',
       backgroundColor: '#9DD08E',
       borderRadius: 54,
       alignItems: 'center'
@@ -99,7 +98,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     fontWeight: 'bold',
     fontFamily: 'Inter-Black',
-    marginTop: 15
+    marginTop: 2.6
   }
 })
 

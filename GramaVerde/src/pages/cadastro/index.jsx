@@ -1,10 +1,20 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
+import { useFonts } from 'expo-font';
+import { FontAwesome } from '@expo/vector-icons'; 
 
 export default function Cadastro() {
     const navigation = useNavigation()
     return(
     <View style={styles.container}>
+        <TouchableOpacity
+        onPress={() =>navigation.navigate('Login')}
+        >
+        <FontAwesome style={styles.voltar}
+        size={36}
+        name='caret-left'
+        />
+        </TouchableOpacity>
         <Image 
         source={require('../../assets/leaf.png')}
         style={styles.img}
@@ -27,7 +37,7 @@ export default function Cadastro() {
         placeholderTextColor={'#9DD08E'}
         />
         <TouchableOpacity style={styles.Botao}
-        onPress={ () => navigation.navigate('perguntas0')}
+        onPress={ () => navigation.navigate('Perguntas0')}
         >
         <Text style={styles.textobotao}> Criar</Text>
         </TouchableOpacity>
@@ -47,7 +57,12 @@ const styles = StyleSheet.create({
         paddingRight: 20,
         paddingBottom: 20,
         paddingTop: 10,
-        fontFamily: 'Inter'
+        f
+    },
+    voltar:{
+        color: '#fff',
+        marginTop: 52,
+        marginRight: 320
     },
     fundo:{
         flex: 1,
@@ -88,13 +103,12 @@ const styles = StyleSheet.create({
     img:{
         width: '15%',
         height: '6.85%',
-        marginTop: 65,
+        marginTop: -23
     },
     textobotao: {
         fontSize:30,
         paddingRight: 10,
         paddingLeft:3,
         color: '#9DD08E',
-        fontFamily: 'Inter-Black'
     }
 })

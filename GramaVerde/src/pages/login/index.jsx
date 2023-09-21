@@ -20,9 +20,11 @@ export default function Login() {
         style={styles.containerInput}
         placeholder='Senha'
         placeholderTextColor={'#9DD08E'}
+        secureTextEntry={true}
+        maxLength={50}
         />
         <TouchableOpacity style={styles.Botao}
-        onPress={ () => navigation.navigate('perguntas0')}>
+        onPress={ () => navigation.navigate('Perguntas0')}>
         <Text style={styles.textobotao}>Login</Text>
         </TouchableOpacity>
         <Text style={styles.textocadastro2}>Não tem uma conta?</Text>
