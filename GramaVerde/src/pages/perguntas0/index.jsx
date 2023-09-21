@@ -5,7 +5,7 @@ import { useFonts } from 'expo-font';
 export default function perguntas0() {
     const navigation = useNavigation()
     const [fontsLoaded] = useFonts({
-        'Inter-Black': require('./src/assets/fonts/Inter-Black.otf'),});
+        'Inter-Black': require('../../assets/fonts/'),});
     return(
         <View style={styles.container}>
             <Image 
