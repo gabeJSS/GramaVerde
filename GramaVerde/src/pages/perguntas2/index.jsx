@@ -120,7 +120,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 15,
     fontWeight: 'bold',
-    fontFamily: 'Inter-Black',
     marginTop: 5.5
   }
 })
