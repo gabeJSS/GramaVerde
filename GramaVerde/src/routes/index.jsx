@@ -5,6 +5,7 @@ import Cadastro from '../pages/cadastro';
 import Perguntas0 from '../pages/perguntas0';
 import Perguntas1 from '../pages/perguntas1';
 import Perguntas2 from '../pages/perguntas2';
+import Main from '../pages/main';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,11 @@ export default function Routes() {
             <Stack.Screen 
             name="Perguntas2" 
             component= { Perguntas2 }
+            options= { {headerShown: false} }
+            />
+            <Stack.Screen 
+            name="Main" 
+            component= { Main }
             options= { {headerShown: false} }
             />
         </Stack.Navigator>

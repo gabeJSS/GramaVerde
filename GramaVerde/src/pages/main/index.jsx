@@ -1,5 +1,6 @@
 import { View, Text } from "react-native-animatable";
-import { StyleSheet } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
+import {apply} from '../../theme/styles'
 
 
 export default function Main() {
@@ -10,17 +11,16 @@ export default function Main() {
             <View
             style={styles.cabeçalho}
             >
-                
             </View>
-            <View>
-
-              <Text
+            <TouchableOpacity
+            style={styles.fundo}
+            >
+              <View
             style={styles.saidas}
             >
-                  Saídas
-                </Text>
+
             </View>
-            
+            </TouchableOpacity>
         </View>
     );
   }
@@ -45,13 +45,11 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 20,
     },
     saidas:{
-        marginTop: 12,
-        paddingTop: 85,
-        paddingBottom:2,
-        paddingLeft: 35,
-        paddingRight: 35,
-        backgroundColor: '#3E3E3E',
-        borderColor: '#9DD08E',
-        borderRadius: 5
-    }
-  });
+        width: 195,
+        backgroundColor: '#3E3E3E'
+        
+  },
+  fundo:{
+    width: 200,
+  }
+})
