@@ -24,12 +24,12 @@ export default function Login() {
         maxLength={50}
         />
         <TouchableOpacity style={styles.Botao}
-        onPress={ () => navigation.navigate('Perguntas0')}>
+        onPress={ () => navigation.navigate('Main')}>
         <Text style={styles.textobotao}>Login</Text>
         </TouchableOpacity>
         <Text style={styles.textocadastro2}>Não tem uma conta?</Text>
         <TouchableOpacity
-         onPress={ () => navigation.navigate('Cadastro')}
+         onPress={ () => navigation.navigate('TelaEntradas')}
          >
         <Text style={styles.textocadastro}>Cadastre-se!</Text>
         </TouchableOpacity>
