@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
-export default function Main() {
+export default function saidas(){
     const navigation = useNavigation()
     return (
         <View
@@ -29,81 +29,11 @@ export default function Main() {
                 (saldo aqui)
               </Text>
             </View>
-            <TouchableOpacity
-            style={styles.fundo0}
-            
-            >
-              <View
-            style={styles.saidas}
-            >
-            <Image
-            source={require('../../assets/barcode.png')}
-            style={styles.barcode}
-            />
-            <Text
-            style={styles.textoSaida}
-            >
-              Saídas
-            </Text>
             </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-            style={styles.fundo1}
-            
-            >
-              <View
-            style={styles.saidas}
-            >
-            <Image
-            source={require('../../assets/cifrao.png')}
-            style={styles.cifrao}
-            />
-            <Text
-            style={styles.textoOrcamento}
-            >
-              Orçamento
-            </Text>
-            </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-            style={styles.fundo2}
-            
-            >
-              <View
-            style={styles.saidas}
-            >
-            <Image
-            source={require('../../assets/entrada.png')}
-            style={styles.subindo}
-            />
-            <Text
-            style={styles.textoEntrada}
-            >
-              Entradas
-            </Text>
-            </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-            style={styles.fundo3}
-            
-            >
-              <View
-            style={styles.projeto}
-            >
-            <Image
-            source={require('../../assets/notepad.png')}
-            style={styles.notepad}
-            />
-            <Text
-            style={styles.textoProjeto}
-            >
-              Projetos
-            </Text>
-            </View>
-            </TouchableOpacity>
-        </View>
-    );
-  }
+    )
+    }
+
+
 
 
 
@@ -173,15 +103,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#9DD08E',
     borderRadius: 5
   },
-  projeto:{
-    alignItems: "center",
-        flex: 1.8,
-        width: 273,
-        height: 100,
-        backgroundColor: '#3E3E3E',
-        paddingBottom: 15,
-        borderRadius: 5
-  },
+  
   barcode:{
     marginTop: 14,
     width: 60,
@@ -196,12 +118,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: 65,
     height: 55,
-  },
-  notepad:{
-    marginTop: 12,
-    marginRight: 150,
-    width: 60,
-    height: 60,
   },
   Titulo: {
     fontSize: 24,
@@ -222,13 +138,6 @@ textoOrcamento: {
   marginTop: 8,
   color:'#fff'
 },
-textoProjeto: {
-  fontSize: 34  ,
-  color: '#fff',
-  marginLeft: 70,
-  marginTop: -56,
-  fontWeight: 'bold',
-},
 proximaConta: {
   fontSize: 18,
   color: '#3E3E3E',
@@ -247,5 +156,4 @@ saldo: {
   fontWeight: 'bold',
   marginLeft: 250,
 },
-
 })

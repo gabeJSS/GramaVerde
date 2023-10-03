@@ -43,6 +43,7 @@ export default function Routes() {
             component= { Main }
             options= { {headerShown: false} }
             />
+            
         </Stack.Navigator>
     </NavigationContainer>
   )
