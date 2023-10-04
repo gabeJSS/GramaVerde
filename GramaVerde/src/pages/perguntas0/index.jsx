@@ -1,37 +1,8 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import {
-    useFonts,
-    Inter_100Thin,
-    Inter_200ExtraLight,
-    Inter_300Light,
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
-  } from '@expo-google-fonts/inter';
 
 export default function Perguntas0() {
     const navigation = useNavigation()
-    let [fontsLoaded] = useFonts({
-        Inter_100Thin,
-        Inter_200ExtraLight,
-        Inter_300Light,
-        Inter_400Regular,
-        Inter_500Medium,
-        Inter_600SemiBold,
-        Inter_700Bold,
-        Inter_800ExtraBold,
-        Inter_900Black,
-      });
-      let fontSize = 24;
-  let paddingVertical = 6;
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  } else {
     return(
         <View style={styles.container}>
             <Image 
@@ -50,7 +21,6 @@ perguntas sobre sua vida financeira para aprimorar nossas capacidades de te auxi
         </View>
     )
   }
-}
 
 const styles = StyleSheet.create({
   Titulo: {
@@ -124,7 +94,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 15,
     fontWeight: 'bold',
-    fontFamily: 'Inter-Black',
     marginTop: 5.5
   }
 })
