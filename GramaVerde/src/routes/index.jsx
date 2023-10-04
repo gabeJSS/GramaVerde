@@ -6,6 +6,7 @@ import Perguntas0 from '../pages/perguntas0';
 import Perguntas1 from '../pages/perguntas1';
 import Perguntas2 from '../pages/perguntas2';
 import Main from '../pages/main';
+import Saidas from '../pages/saidas';
 
 const Stack = createNativeStackNavigator();
 
@@ -43,7 +44,11 @@ export default function Routes() {
             component= { Main }
             options= { {headerShown: false} }
             />
-            
+            <Stack.Screen 
+            name="Saidas" 
+            component= { Saidas }
+            options= { {headerShown: false} }
+            />
         </Stack.Navigator>
     </NavigationContainer>
   )

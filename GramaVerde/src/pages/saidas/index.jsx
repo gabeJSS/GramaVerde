@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
-export default function saidas(){
+export default function Saidas(){
     const navigation = useNavigation()
     return (
         <View

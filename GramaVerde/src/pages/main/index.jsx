@@ -1,7 +1,6 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import { Constants } from 'expo';
 
 export default function Main() {
     const navigation = useNavigation()
@@ -12,6 +11,10 @@ export default function Main() {
             <View
             style={styles.cabeçalho}
             >
+              <Image
+              source={require('../../assets/logo.png')}
+              style={styles.imgLogo}
+              />
               <Text 
               style={styles.Titulo}
               >
@@ -32,7 +35,7 @@ export default function Main() {
             </View>
             <TouchableOpacity
             style={styles.fundo0}
-            
+            onPress={ () => navigation.navigate('Saidas')}
             >
               <View
             style={styles.saidas}
@@ -118,8 +121,8 @@ const styles = StyleSheet.create({
     cabeçalho:{
         flex: 1,
         width: '100%',
-        marginTop: -500 ,
-        maxHeight: '30%',
+        marginTop: -150 ,
+        maxHeight: '25%',
         backgroundColor: '#9DD08E',
         alignItems: 'center',
         borderBottomLeftRadius: 20,
@@ -177,12 +180,12 @@ const styles = StyleSheet.create({
   },
   projeto:{
     alignItems: "center",
-        flex: 1.8,
-        width: 273,
-        height: 100,
-        backgroundColor: '#3E3E3E',
-        paddingBottom: 15,
-        borderRadius: 5
+    flex: 1.8,
+    width: 273,
+    height: 100,
+    backgroundColor: '#3E3E3E',
+    paddingBottom: 15,
+    borderRadius: 5
   },
   barcode:{
     marginTop: 14,
@@ -205,6 +208,11 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
   },
+  imgLogo:{
+    width: 140,
+    height: 20,
+    marginTop:100
+  },
   Titulo: {
     fontSize: 24,
     color: '#3E3E3E',
@@ -213,41 +221,41 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
 },
 textoSaida: {
-  marginTop: 13,
-  color:'#fff'
+    marginTop: 13,
+    color:'#fff'
 },
 textoEntrada:{
-  marginTop: 12,
-  color:'#fff'
+    marginTop: 12,
+    color:'#fff'
  },
 textoOrcamento: {
-  marginTop: 8,
-  color:'#fff'
+    marginTop: 8,
+    color:'#fff'
 },
 textoProjeto: {
-  fontSize: 34  ,
-  color: '#fff',
-  marginLeft: 70,
-  marginTop: -56,
-  fontWeight: 'bold',
+    fontSize: 34  ,
+    color: '#fff',
+    marginLeft: 70,
+    marginTop: -56,
+    fontWeight: 'bold',
 },
 proximaConta: {
-  fontSize: 18,
-  color: '#3E3E3E',
-  marginRight: 246,
+    fontSize: 18,
+    color: '#3E3E3E',
+    marginRight: 246,
 },
 validadeConta: {
-  fontSize: 18,
-  color: '#3E3E3E',
-  marginRight: 150,
-  marginTop: 5,
+    fontSize: 18,
+    color: '#3E3E3E',
+    marginRight: 150,
+    marginTop: 5,
 },
 saldo: {
-  fontSize: 24,
-  color: '#3E3E3E',
-  marginTop: 10,
-  fontWeight: 'bold',
-  marginLeft: 250,
+    fontSize: 24,
+    color: '#3E3E3E',
+    marginTop: 10,
+    fontWeight: 'bold',
+    marginLeft: 250,
 },
 
 })
