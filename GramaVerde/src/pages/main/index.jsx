@@ -1,6 +1,7 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import { Constants } from 'expo';
 
 export default function Main() {
     const navigation = useNavigation()
@@ -116,12 +117,13 @@ const styles = StyleSheet.create({
     },
     cabeçalho:{
         flex: 1,
-        width: '200%',
-        marginTop: -577.5 ,
+        width: '100%',
+        marginTop: -500 ,
         maxHeight: '30%',
         backgroundColor: '#9DD08E',
         alignItems: 'center',
-        borderRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20
     },
     saidas:{
         alignItems: "center",
@@ -140,7 +142,7 @@ const styles = StyleSheet.create({
     height: 100,
     padding: 1,
     backgroundColor: '#9DD08E',
-    borderRadius: 5
+    borderRadius: 5,
   },
   fundo1:{
     alignItems: "center",
@@ -151,8 +153,8 @@ const styles = StyleSheet.create({
     height: 100,
     padding: 1,
     backgroundColor: '#9DD08E',
-    borderRadius: 5
-  },
+    borderRadius: 5,
+    },
   fundo2:{
     alignItems: "center",
     marginTop: -100,
