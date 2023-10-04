@@ -1,10 +1,16 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import { useNavigation } from '@react-navigation/native';
 
 export default function Main() {
     const navigation = useNavigation()
     return (
+      <>
+      {...}
+      {/* Use light text instead of dark text in the status bar to provide more contrast with a dark background. */}
+      <StatusBar style="light" />
+    </>
         <View
         style={styles.container}
         >
@@ -121,10 +127,10 @@ const styles = StyleSheet.create({
     cabeçalho:{
         flex: 1,
         width: '100%',
-        marginTop: -150 ,
+        marginTop: -400 ,
         maxHeight: '25%',
         backgroundColor: '#9DD08E',
-        alignItems: 'center',
+        alignItems: 'baseline',
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20
     },
@@ -211,13 +217,14 @@ const styles = StyleSheet.create({
   imgLogo:{
     width: 140,
     height: 20,
-    marginTop:100
+    marginTop:43,
+    marginLeft:4
   },
   Titulo: {
     fontSize: 24,
     color: '#3E3E3E',
-    marginTop: 110,
-    marginRight: 150,
+    marginTop: 10,
+    marginLeft:3,
     fontWeight: 'bold'
 },
 textoSaida: {
@@ -242,12 +249,12 @@ textoProjeto: {
 proximaConta: {
     fontSize: 18,
     color: '#3E3E3E',
-    marginRight: 246,
+    marginLeft:3
 },
 validadeConta: {
     fontSize: 18,
     color: '#3E3E3E',
-    marginRight: 150,
+    marginLeft:3,
     marginTop: 5,
 },
 saldo: {
