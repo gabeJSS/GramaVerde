@@ -6,11 +6,6 @@ import { useNavigation } from '@react-navigation/native';
 export default function Main() {
     const navigation = useNavigation()
     return (
-      <>
-      {...}
-      {/* Use light text instead of dark text in the status bar to provide more contrast with a dark background. */}
-      <StatusBar style="light" />
-    </>
         <View
         style={styles.container}
         >
