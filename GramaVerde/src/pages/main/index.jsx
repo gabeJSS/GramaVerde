@@ -117,12 +117,10 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#292832',
       alignItems: 'center',
-      justifyContent: 'center',
     },
     cabeçalho:{
         flex: 1,
         width: '100%',
-        marginTop: -400 ,
         maxHeight: '25%',
         backgroundColor: '#9DD08E',
         alignItems: 'baseline',
@@ -212,7 +210,7 @@ const styles = StyleSheet.create({
   imgLogo:{
     width: 140,
     height: 20,
-    marginTop:43,
+    marginTop:5,
     marginLeft:4
   },
   Titulo: {

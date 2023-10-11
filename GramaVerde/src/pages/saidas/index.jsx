@@ -1,3 +1,4 @@
+
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
@@ -11,10 +12,20 @@ export default function Saidas(){
             <View
             style={styles.cabeçalho}
             >
+              <Image
+              source={require('../../assets/logo.png')}
+              style={styles.imgLogo}
+              />
               <TouchableOpacity
-              style={styles.saídasBtn}
+              style={styles.saidasBtn}
               >
-                <Text>Saídas</Text>
+                <Image
+                source={require('../../assets/add.png')}
+                style={styles.addImg}
+                />
+                <Text
+                style={styles.saidasTxt}
+                >Saídas</Text>
               </TouchableOpacity>
             </View>
         </View>
@@ -33,21 +44,46 @@ const styles = StyleSheet.create({
     },
     cabeçalho:{
         flex: 1,
-        width: '200%',
+        width: '100%',
         maxHeight: '25%',
         backgroundColor: '#9DD08E',
-        alignItems: 'center',
-        borderRadius: 20,
-        justifyContent: 'center',
-        borderBottomRightRadius: 20,
         borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+
     },
-    saídasBtn:{
+    saidasBtn:{
       backgroundColor: '#00AF04',
-      paddingLeft: 200,
-      paddingRight: 50,
+      paddingLeft: 50,
+      paddingRight: 30,
       paddingBottom: 20,
-      paddingTop:20,
-      borderRadius: 20
-    }
+      paddingTop: 20,
+      borderRadius: 20,
+      flexDirection: 'row',
+      alignSelf: 'center',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 40,
+      shadowColor: '#000',
+    shadowOffset:{
+      width:0,
+      height:2
+    },
+    shadowOpacity:0.25,
+    shadowRadius:4,
+    },
+    saidasTxt:{
+      marginRight: 20,
+      fontSize: 30,
+    },
+    addImg:{
+      width: 65,
+      height: 65,
+      marginRight: 80
+    },
+    imgLogo:{
+      width: 140,
+      height: 20,
+      marginLeft: 5,
+      marginTop: 0
+    },
 })
