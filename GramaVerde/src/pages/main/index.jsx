@@ -106,6 +106,8 @@ export default function Main() {
             </Text>
             </View>
             </TouchableOpacity>
+            
+            
         </View>
     );
   }

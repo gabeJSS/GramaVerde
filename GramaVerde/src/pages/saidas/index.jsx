@@ -28,6 +28,15 @@ export default function Saidas(){
                 >Saídas</Text>
               </TouchableOpacity>
             </View>
+            <TouchableOpacity
+            style={styles.click}
+            onPress={() => navigation.navigate('Main')}
+            >
+              <Image
+            source={require('../../assets/voltar.png')}
+            style={styles.voltar}
+            />
+            </TouchableOpacity>
         </View>
     )
     }
@@ -53,7 +62,7 @@ const styles = StyleSheet.create({
     },
     saidasBtn:{
       backgroundColor: '#00AF04',
-      paddingLeft: 50,
+      paddingLeft: 60,
       paddingRight: 30,
       paddingBottom: 20,
       paddingTop: 20,
@@ -70,6 +79,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity:0.25,
     shadowRadius:4,
+    elevation:5
     },
     saidasTxt:{
       marginRight: 20,
@@ -78,7 +88,7 @@ const styles = StyleSheet.create({
     addImg:{
       width: 65,
       height: 65,
-      marginRight: 80
+      marginRight: 60
     },
     imgLogo:{
       width: 140,
@@ -86,4 +96,12 @@ const styles = StyleSheet.create({
       marginLeft: 5,
       marginTop: 0
     },
+    click:{
+      marginTop: 550,
+      marginRight: 320
+    },
+    voltar:{
+      width: 55,
+      height: 55,
+    }
 })
