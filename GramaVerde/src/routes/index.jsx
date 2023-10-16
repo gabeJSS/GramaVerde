@@ -7,6 +7,7 @@ import Perguntas1 from '../pages/perguntas1';
 import Perguntas2 from '../pages/perguntas2';
 import Main from '../pages/main';
 import Saidas from '../pages/saidas';
+import Orcamento from '../pages/orcamento';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,11 @@ export default function Routes() {
             <Stack.Screen 
             name="Saidas" 
             component= { Saidas }
+            options= { {headerShown: false} }
+            />
+            <Stack.Screen 
+            name="Orcamento" 
+            component= { Orcamento }
             options= { {headerShown: false} }
             />
         </Stack.Navigator>

@@ -54,7 +54,7 @@ export default function Main() {
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.fundo1}
-            
+            onPress={ () => navigation.navigate('Orcamento')}
             >
               <View
             style={styles.saidas}
