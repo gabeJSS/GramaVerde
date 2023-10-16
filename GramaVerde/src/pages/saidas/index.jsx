@@ -1,7 +1,7 @@
-
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+
 
 export default function Saidas(){
     const navigation = useNavigation()
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
       width: 140,
       height: 20,
       marginLeft: 5,
-      marginTop: 0
+      marginTop: 5
     },
     click:{
       marginTop: 550,

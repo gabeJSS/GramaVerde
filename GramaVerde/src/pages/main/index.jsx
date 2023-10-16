@@ -1,10 +1,10 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { StatusBar } from "expo-status-bar";
 import { useNavigation } from '@react-navigation/native';
 
 export default function Main() {
     const navigation = useNavigation()
+
     return (
         <View
         style={styles.container}
