@@ -106,8 +106,15 @@ export default function Main() {
             </Text>
             </View>
             </TouchableOpacity>
-            
-            
+            <TouchableOpacity
+            style={styles.click}
+            onPress={() => navigation.navigate('Login')}
+            >
+              <Image
+            source={require('../../assets/voltar.png')}
+            style={styles.voltar}
+            />
+            </TouchableOpacity>
         </View>
     );
   }
@@ -120,6 +127,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#292832',
       alignItems: 'center',
     },
+    click:{
+      marginTop: 330,
+      marginRight: 320
+  },
     cabeçalho:{
         flex: 1,
         width: '100%',
@@ -129,6 +140,10 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20
     },
+    voltar:{
+      width: 55,
+      height: 55,
+  },
     saidas:{
         alignItems: "center",
         flex: 1.8,

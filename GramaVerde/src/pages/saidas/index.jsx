@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#9DD08E',
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-
     },
     saidasBtn:{
       backgroundColor: '#00AF04',
@@ -82,13 +81,22 @@ const styles = StyleSheet.create({
     elevation:5
     },
     saidasTxt:{
-      marginRight: 20,
+      marginRight: 30,
       fontSize: 30,
+      fontWeight: 'bold',
+      shadowColor: '#000',
+    shadowOffset:{
+      width:0,
+      height:2
+    },
+    shadowOpacity:0.25,
+    shadowRadius:4,
+    elevation:5
     },
     addImg:{
       width: 65,
       height: 65,
-      marginRight: 60
+      marginRight: 40
     },
     imgLogo:{
       width: 140,

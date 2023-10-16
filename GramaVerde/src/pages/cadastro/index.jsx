@@ -1,19 +1,14 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View, Alert } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { FontAwesome } from '@expo/vector-icons'; 
 
 export default function Cadastro() {
     const navigation = useNavigation()
     return(
     <View style={styles.container}>
-        <TouchableOpacity
-        onPress={() =>navigation.navigate('Login')}
-        >
-        <FontAwesome style={styles.voltar}
-        size={36}
-        name='caret-left'
+        <Image 
+        source={require('../../assets/leaf.png')}
+        style={styles.img}
         />
-        </TouchableOpacity>
         <View
         style={styles.fundo}>
         <Text style={styles.Titulo}>Cadastro</Text>
@@ -36,6 +31,15 @@ export default function Cadastro() {
         >
         <Text style={styles.textobotao}> Criar</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+            style={styles.click}
+            onPress={() => navigation.navigate('Login')}
+            >
+              <Image
+            source={require('../../assets/voltar.png')}
+            style={styles.voltar}
+            />
+            </TouchableOpacity>
         </View>
     </View>
     )
@@ -55,18 +59,22 @@ const styles = StyleSheet.create({
         
     },
     voltar:{
-        color: '#fff',
-        marginTop: 52,
+        width: 55,
+        height: 55,
+    },
+    click:{
+        marginTop: 120,
         marginRight: 320
     },
     fundo:{
         flex: 1,
-        marginTop: 70,
+        marginTop: -60,
         width: '84.88%',
         maxHeight: '60%',
         backgroundColor: '#9DD08E',
         borderRadius: 54,
-        alignItems: 'center'
+        alignItems: 'center',
+        alignSelf: 'center'
     },
     Botao: {
         backgroundColor: '#292832',
@@ -82,7 +90,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#292832',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     containerInput:{
         backgroundColor: "#292832",
