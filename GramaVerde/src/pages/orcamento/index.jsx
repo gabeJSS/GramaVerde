@@ -1,10 +1,13 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-
+import { useFonts } from 'expo-font';
 
 export default function Saidas(){
     const navigation = useNavigation()
+    const [fontsLoaded] = useFonts({
+      'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf')
+    });
     return (
         <View
         style={styles.container}
@@ -54,14 +57,13 @@ const styles = StyleSheet.create({
     cabeçalho:{
         flex: 1,
         width: '100%',
-        maxHeight: '25%',
+        maxHeight: 210,
         backgroundColor: '#9DD08E',
-        paddingBottom: 50,
-        paddingTop: 50,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
     },
     saidasBtn:{
+      marginTop:10,
       backgroundColor: '#00AF04',
       paddingLeft: 60,
       paddingRight: 30,
@@ -87,6 +89,7 @@ const styles = StyleSheet.create({
       fontSize: 30,
       fontWeight: 'bold',
       shadowColor: '#000',
+      fontFamily: 'Inter-SemiBold',
     shadowOffset:{
       width:0,
       height:2
@@ -107,7 +110,7 @@ const styles = StyleSheet.create({
       marginTop: 5
     },
     click:{
-      marginTop: 550,
+      marginTop: 540,
       marginRight: 320
     },
     voltar:{

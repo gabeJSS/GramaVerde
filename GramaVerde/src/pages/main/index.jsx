@@ -1,10 +1,20 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity } from "react-native";
+import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Main() {
     const navigation = useNavigation()
-
+    const [fontsLoaded] = useFonts({
+      'Inter-Black': require('../../assets/fonts/Inter-Black.ttf'),
+      'Inter-Bold': require('../../assets/fonts/Inter-Bold.ttf'),
+      'Inter-ExtraBold': require('../../assets/fonts/Inter-ExtraBold.ttf'),
+      'Inter-ExtraLight': require('../../assets/fonts/Inter-ExtraLight.ttf'),
+      'Inter-Medium': require('../../assets/fonts/Inter-Medium.ttf'),
+      'Inter-Regular': require('../../assets/fonts/Inter-Regular.ttf'),
+      'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
+      'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
+    });
     return (
         <View
         style={styles.container}
@@ -235,43 +245,48 @@ const styles = StyleSheet.create({
     color: '#3E3E3E',
     marginTop: 10,
     marginLeft:3,
-    fontWeight: 'bold'
+    fontFamily: 'Inter-SemiBold'
 },
 textoSaida: {
     marginTop: 13,
-    color:'#fff'
+    color:'#fff',
+    fontFamily: 'Inter-SemiBold'
 },
 textoEntrada:{
     marginTop: 12,
-    color:'#fff'
+    color:'#fff',
+    fontFamily: 'Inter-SemiBold'
  },
 textoOrcamento: {
     marginTop: 8,
-    color:'#fff'
+    color:'#fff',
+    fontFamily: 'Inter-SemiBold'
 },
 textoProjeto: {
     fontSize: 34  ,
     color: '#fff',
     marginLeft: 70,
     marginTop: -56,
-    fontWeight: 'bold',
+    fontFamily: 'Inter-SemiBold'
 },
 proximaConta: {
     fontSize: 18,
     color: '#3E3E3E',
-    marginLeft:3
+    marginLeft:3,
+    fontFamily: 'Inter-SemiBold'
 },
 validadeConta: {
     fontSize: 18,
     color: '#3E3E3E',
     marginLeft:3,
     marginTop: 5,
+    fontFamily: 'Inter-SemiBold'
 },
 saldo: {
     fontSize: 24,
     color: '#3E3E3E',
     marginTop: 10,
-    fontWeight: 'bold',
+    fontFamily: 'Inter-SemiBold',
     marginLeft: 250,
 },
 
