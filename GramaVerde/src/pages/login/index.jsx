@@ -1,11 +1,23 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import * as Animatable from 'react-native-animatable'
+import { useFonts } from 'expo-font';
 
 export default function Login() {
     const navigation = useNavigation()
+    const [fontsLoaded] = useFonts({
+      'Inter-Black': require('../../assets/fonts/Inter-Black.ttf'),
+      'Inter-Bold': require('../../assets/fonts/Inter-Bold.ttf'),
+      'Inter-ExtraBold': require('../../assets/fonts/Inter-ExtraBold.ttf'),
+      'Inter-ExtraLight': require('../../assets/fonts/Inter-ExtraLight.ttf'),
+      'Inter-Regular': require('../../assets/fonts/Inter-Regular.ttf'),
+      'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
+      'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
+    });
     return(
     <View style={styles.container}>
-        <Image 
+        <Animatable.Image 
+        animation="flipInY"
         source={require('../../assets/leaf.png')}
         style={styles.img}
         />
@@ -25,7 +37,7 @@ export default function Login() {
         />
         <TouchableOpacity style={styles.Botao}
         onPress={ () => navigation.navigate('Main')}>
-        <Text style={styles.textobotao}>Login</Text>
+        <Text style={styles.textobotao}>Entrar</Text>
         </TouchableOpacity>
         <Text style={styles.textocadastro2}>Não tem uma conta?</Text>
         <TouchableOpacity
@@ -40,7 +52,7 @@ export default function Login() {
 const styles = StyleSheet.create({
     Titulo: {
         fontSize: 52,
-        fontWeight: 'bold',
+        fontFamily: 'Inter-ExtraBold',
         color: '#9DD08E',
         marginTop: 35,
         backgroundColor: '#292832',
@@ -94,16 +106,20 @@ const styles = StyleSheet.create({
     },
     textobotao: {
         fontSize:30,
-        paddingRight: 10,
+        paddingRight: 7,
         paddingLeft:3,
-        color: '#9DD08E'
+        paddingBottom: 2,
+        color: '#9DD08E',
+        fontFamily: 'Inter-ExtraBold'
     },
     textocadastro:{
         fontSize:15,
-        marginTop:3
+        marginTop:3,
+        fontFamily: 'Inter_Medium'
     },
     textocadastro2:{
         fontSize:15,
-        marginTop:10
+        marginTop:10,
+        fontFamily: 'Inter_Medium'
     }
 })

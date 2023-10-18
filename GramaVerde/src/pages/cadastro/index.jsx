@@ -1,8 +1,13 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
 
 export default function Cadastro() {
     const navigation = useNavigation()
+    const [fontsLoaded] = useFonts({
+        'Inter-ExtraBold': require('../../assets/fonts/Inter-ExtraBold.ttf'),
+        'Inter-Medium': require('../../assets/fonts/Inter-Medium.ttf'),
+      });
     return(
     <View style={styles.container}>
         <Image 
@@ -47,16 +52,15 @@ export default function Cadastro() {
 const styles = StyleSheet.create({
     Titulo: {
         fontSize: 52,
-        fontWeight: 'bold',
         color: '#9DD08E',
         marginTop: 35,
         backgroundColor: '#292832',
         borderRadius: 50,
-        paddingLeft: 20,
-        paddingRight: 20,
+        paddingLeft: 25,
+        paddingRight: 26,
         paddingBottom: 20,
         paddingTop: 10,
-        
+        fontFamily: 'Inter-ExtraBold'
     },
     voltar:{
         width: 55,
@@ -68,13 +72,13 @@ const styles = StyleSheet.create({
     },
     fundo:{
         flex: 1,
-        marginTop: -60,
         width: '84.88%',
         maxHeight: '60%',
         backgroundColor: '#9DD08E',
         borderRadius: 54,
         alignItems: 'center',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginTop: 40,
     },
     Botao: {
         backgroundColor: '#292832',
@@ -90,8 +94,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#292832',
-        alignItems: 'center',
-        justifyContent: 'center'
     },
     containerInput:{
         backgroundColor: "#292832",
@@ -107,12 +109,14 @@ const styles = StyleSheet.create({
     img:{
         width: '15%',
         height: '6.85%',
-        marginTop: -23
+        alignSelf: 'center',
+        marginTop: 65
     },
     textobotao: {
         fontSize:30,
         paddingRight: 10,
         paddingLeft:3,
         color: '#9DD08E',
+        fontFamily: 'Inter-ExtraBold'
     }
 })

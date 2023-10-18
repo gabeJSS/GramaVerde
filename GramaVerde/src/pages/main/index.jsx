@@ -82,7 +82,7 @@ export default function Main() {
             </TouchableOpacity>
             <TouchableOpacity
             style={styles.fundo2}
-            
+            onPress={() => navigation.navigate('Entradas')}
             >
               <View
             style={styles.saidas}
@@ -196,7 +196,6 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   fundo3:{
-    alignItems: "center",
     marginTop: 15,
     width: 275,
     height: 85,
@@ -206,12 +205,14 @@ const styles = StyleSheet.create({
   },
   projeto:{
     alignItems: "center",
+    justifyContent: 'center',
     flex: 1.8,
     width: 273,
     height: 100,
     backgroundColor: '#3E3E3E',
     paddingBottom: 15,
-    borderRadius: 5
+    borderRadius: 5,
+    flexDirection: 'row'
   },
   barcode:{
     marginTop: 14,
@@ -229,8 +230,7 @@ const styles = StyleSheet.create({
     height: 55,
   },
   notepad:{
-    marginTop: 12,
-    marginRight: 150,
+    marginTop: 15,
     width: 60,
     height: 60,
   },
@@ -250,24 +250,24 @@ const styles = StyleSheet.create({
 textoSaida: {
     marginTop: 13,
     color:'#fff',
-    fontFamily: 'Inter-SemiBold'
+    fontFamily: 'Inter-Bold'
 },
 textoEntrada:{
     marginTop: 12,
     color:'#fff',
-    fontFamily: 'Inter-SemiBold'
+    fontFamily: 'Inter-Bold'
  },
 textoOrcamento: {
     marginTop: 8,
     color:'#fff',
-    fontFamily: 'Inter-SemiBold'
+    fontFamily: 'Inter-Bold'
 },
 textoProjeto: {
-    fontSize: 34  ,
+    marginLeft: 10,
+    marginTop: 13,
+    fontSize: 34 ,
     color: '#fff',
-    marginLeft: 70,
-    marginTop: -56,
-    fontFamily: 'Inter-SemiBold'
+    fontFamily: 'Inter-Bold'
 },
 proximaConta: {
     fontSize: 18,

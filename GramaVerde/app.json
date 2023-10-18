@@ -11,8 +11,8 @@
       "translucent": false
     },
     "splash": {
-      "image": "./src/assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./src/assets/adaptive-icon.png",
+      "resizeMode": "fill",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
