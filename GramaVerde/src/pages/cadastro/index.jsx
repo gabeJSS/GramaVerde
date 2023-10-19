@@ -7,46 +7,46 @@ export default function Cadastro() {
     const [fontsLoaded] = useFonts({
         'Inter-ExtraBold': require('../../assets/fonts/Inter-ExtraBold.ttf'),
         'Inter-Medium': require('../../assets/fonts/Inter-Medium.ttf'),
-      });
-    return(
-    <View style={styles.container}>
-        <Image 
-        source={require('../../assets/leaf.png')}
-        style={styles.img}
-        />
-        <View
-        style={styles.fundo}>
-        <Text style={styles.Titulo}>Cadastro</Text>
-        <TextInput 
-        style={styles.containerInput}
-        placeholder='Email'
-        placeholderTextColor={'#9DD08E'}/>
-        <TextInput 
-        style={styles.containerInput}
-        placeholder='Senha'
-        placeholderTextColor={'#9DD08E'}
-        />
-        <TextInput 
-        style={styles.containerInput}
-        placeholder='Confirmar senha'
-        placeholderTextColor={'#9DD08E'}
-        />
-        <TouchableOpacity style={styles.Botao}
-        onPress={ () => navigation.navigate('Perguntas0')}
-        >
-        <Text style={styles.textobotao}> Criar</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-            style={styles.click}
-            onPress={() => navigation.navigate('Login')}
-            >
-              <Image
-            source={require('../../assets/voltar.png')}
-            style={styles.voltar}
+    });
+    return (
+        <View style={styles.container}>
+            <Image
+                source={require('../../assets/leaf.png')}
+                style={styles.img}
             />
-            </TouchableOpacity>
+            <View
+                style={styles.fundo}>
+                <Text style={styles.Titulo}>Cadastro</Text>
+                <TextInput
+                    style={styles.containerInput}
+                    placeholder='Email'
+                    placeholderTextColor={'#9DD08E'} />
+                <TextInput
+                    style={styles.containerInput}
+                    placeholder='Senha'
+                    placeholderTextColor={'#9DD08E'}
+                />
+                <TextInput
+                    style={styles.containerInput}
+                    placeholder='Confirmar senha'
+                    placeholderTextColor={'#9DD08E'}
+                />
+                <TouchableOpacity style={styles.Botao}
+                    onPress={() => navigation.navigate('Perguntas0')}
+                >
+                    <Text style={styles.textobotao}> Criar</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.click}
+                    onPress={() => navigation.navigate('Login')}
+                >
+                    <Image
+                        source={require('../../assets/voltar.png')}
+                        style={styles.voltar}
+                    />
+                </TouchableOpacity>
+            </View>
         </View>
-    </View>
     )
 }
 const styles = StyleSheet.create({
@@ -62,15 +62,15 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         fontFamily: 'Inter-ExtraBold'
     },
-    voltar:{
+    voltar: {
         width: 55,
         height: 55,
     },
-    click:{
+    click: {
         marginTop: 120,
         marginRight: 320
     },
-    fundo:{
+    fundo: {
         flex: 1,
         width: '84.88%',
         maxHeight: '60%',
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#292832',
     },
-    containerInput:{
+    containerInput: {
         backgroundColor: "#292832",
         color: '#9DD08E',
         width: '80%',
@@ -106,16 +106,16 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingBottom: 10,
     },
-    img:{
+    img: {
         width: '15%',
         height: '6.85%',
         alignSelf: 'center',
         marginTop: 65
     },
     textobotao: {
-        fontSize:30,
+        fontSize: 30,
         paddingRight: 10,
-        paddingLeft:3,
+        paddingLeft: 3,
         color: '#9DD08E',
         fontFamily: 'Inter-ExtraBold'
     }

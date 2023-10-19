@@ -13,92 +13,92 @@ export default function Entradas() {
         'Inter-Regular': require('../../assets/fonts/Inter-Regular.ttf'),
         'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
         'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
-      });
-  return (
-      <View style={styles.container}>
-        <View style={styles.cabeçalho}>
-        <Image
-              source={require('../../assets/logo.png')}
-              style={styles.imgLogo}
-              />
-            <View style={styles.icone}>
-                <Text style={styles.textoIcone}>Entradas</Text>
+    });
+    return (
+        <View style={styles.container}>
+            <View style={styles.cabeçalho}>
+                <Image
+                    source={require('../../assets/logo.png')}
+                    style={styles.imgLogo}
+                />
+                <View style={styles.icone}>
+                    <Text style={styles.textoIcone}>Entradas</Text>
+                </View>
+            </View>
+            <View style={styles.saidasBtn}>
+                <Text style={styles.texto}>
+                    R$7.500,00
+                </Text>
+                <Text style={styles.texto}>
+                    Salário
+                </Text>
+            </View>
+            <View style={styles.saidasBtn}>
+                <Text style={styles.texto}>
+                    R$7.500,00
+                </Text>
+                <Text style={styles.texto}>
+                    Salário
+                </Text>
+            </View>
+            <View style={styles.saidasBtn}>
+                <Text style={styles.texto}>
+                    R$7.500,00
+                </Text>
+                <Text style={styles.texto}>
+                    Salário
+                </Text>
+            </View>
+            <View style={styles.saidasBtn}>
+                <Text style={styles.texto}>
+                    R$7.500,00
+                </Text>
+                <Text style={styles.texto}>
+                    Salário
+                </Text>
+            </View>
+            <View
+                style={styles.click}
+            >
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('Main')}
+                >
+                    <Image
+                        source={require('../../assets/voltar.png')}
+                        style={styles.voltar}
+                    />
+                </TouchableOpacity>
             </View>
         </View>
-        <View style={styles.saidasBtn}>
-            <Text style={styles.texto}>
-               R$7.500,00 
-            </Text>
-            <Text style={styles.texto}>
-                Salário
-            </Text>
-        </View>
-        <View style={styles.saidasBtn}>
-            <Text style={styles.texto}>
-               R$7.500,00 
-            </Text>
-            <Text style={styles.texto}>
-                Salário
-            </Text>
-        </View>
-        <View style={styles.saidasBtn}>
-            <Text style={styles.texto}>
-               R$7.500,00 
-            </Text>
-            <Text style={styles.texto}>
-                Salário
-            </Text>
-        </View>
-        <View style={styles.saidasBtn}>
-            <Text style={styles.texto}>
-               R$7.500,00 
-            </Text>
-            <Text style={styles.texto}>
-                Salário
-            </Text>
-        </View>
-        <View
-        style={styles.click}
-        >
-        <TouchableOpacity
-        onPress={() => navigation.navigate('Main')}
-        >
-              <Image
-            source={require('../../assets/voltar.png')}
-            style={styles.voltar}
-            />
-            </TouchableOpacity>
-        </View>
-      </View>
-  );
+    );
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#292832'
     },
-    texto:{
+    texto: {
         fontFamily: 'Inter-Black'
     },
-    cabeçalho:{
+    cabeçalho: {
         flexBasis: 190,
         width: '100%',
         backgroundColor: '#9DD08E',
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20
     },
-    click:{
+    click: {
         marginTop: 85,
         alignSelf: 'flex-start',
         marginLeft: 10
     },
-    voltar:{
+    voltar: {
         width: 55,
         height: 55,
-      },
-    icone:{
+    },
+    icone: {
         marginTop: 24,
         flexBasis: 100,
         width: 320,
@@ -116,18 +116,18 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 3,
     },
-    textoIcone:{
+    textoIcone: {
         fontSize: 30,
         fontFamily: 'Inter-SemiBold'
     },
-    imgLogo:{
+    imgLogo: {
         width: 140,
         height: 20,
-        marginTop:5,
-        marginLeft:4
-      },
-      saidasBtn:{
-        marginTop:40,
+        marginTop: 5,
+        marginLeft: 4
+    },
+    saidasBtn: {
+        marginTop: 40,
         backgroundColor: '#61B648',
         paddingLeft: 30,
         paddingRight: 30,
@@ -138,10 +138,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         shadowColor: '#000',
-      shadowOffset:{
-        width:0,
-        height:2
-      },
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
     },
 
 })

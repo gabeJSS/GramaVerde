@@ -15,53 +15,53 @@ const Stack = createNativeStackNavigator();
 export default function Routes() {
   return (
     <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen 
-            name="Login"
-            component= { Login }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Cadastro" 
-            component= { Cadastro }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Perguntas0" 
-            component= { Perguntas0 }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Perguntas1" 
-            component= { Perguntas1 }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Perguntas2" 
-            component= { Perguntas2 }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Main" 
-            component= { Main }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Saidas" 
-            component= { Saidas }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Orcamento" 
-            component= { Orcamento }
-            options= { {headerShown: false} }
-            />
-            <Stack.Screen 
-            name="Entradas" 
-            component= { Entradas }
-            options= { {headerShown: false} }
-            />
-        </Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Cadastro"
+          component={Cadastro}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Perguntas0"
+          component={Perguntas0}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Perguntas1"
+          component={Perguntas1}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Perguntas2"
+          component={Perguntas2}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Main"
+          component={Main}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Saidas"
+          component={Saidas}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Orcamento"
+          component={Orcamento}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Entradas"
+          component={Entradas}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }
