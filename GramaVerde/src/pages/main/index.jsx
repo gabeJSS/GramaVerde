@@ -1,5 +1,5 @@
 import { View, Text, Image } from "react-native-animatable";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity, Linking, Button } from "react-native";
 import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 
@@ -44,6 +44,9 @@ export default function Main() {
           (saldo aqui)
         </Text>
       </View>
+      <View
+      style={styles.deLado}
+      >
       <TouchableOpacity
         style={styles.fundo0}
         onPress={() => navigation.navigate('Saidas')}
@@ -98,6 +101,7 @@ export default function Main() {
           </Text>
         </View>
       </TouchableOpacity>
+      </View>
       <TouchableOpacity
         style={styles.fundo3}
       >
@@ -116,6 +120,17 @@ export default function Main() {
         </View>
       </TouchableOpacity>
       <TouchableOpacity
+      onPress={ ()=>{ Linking.openURL('https://www.iplace.com.br/apple-iphone-13-128gb-estelar-mlpg3br-a/220851?gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzolLQzHQEvUu83QwKYcD-Q0E2udEPBCPdzN6TVWAfcjMciyg_ch8XcaAuPvEALw_wcB')}}
+      >
+        <Image
+        source={require("../../assets/iphone.png")}
+        style={styles.iphoneAd}
+        />
+        </TouchableOpacity>
+        <View
+        style={styles.os2}
+        >
+      <TouchableOpacity
         style={styles.click}
         onPress={() => navigation.navigate('Login')}
       >
@@ -124,6 +139,16 @@ export default function Main() {
           style={styles.voltar}
         />
       </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.click2}
+        onPress={() => navigation.navigate('Login')}
+      >
+        <Image
+          source={require('../../assets/config.png')}
+          style={styles.voltar}
+        />
+      </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -136,18 +161,34 @@ const styles = StyleSheet.create({
     backgroundColor: '#292832',
     alignItems: 'center',
   },
+  deLado:{
+    flexDirection: 'row',
+    marginTop: 15,
+  },
+  os2:{
+    flexDirection: 'row',
+    marginTop:200,
+    marginBottom: 15
+  },
   click: {
-    marginTop: 330,
-    marginRight: 320
+    marginRight: 135
+  },
+  click2: {
+    marginLeft: 135
   },
   cabeçalho: {
     flex: 1,
     width: '100%',
-    maxHeight: '25%',
+    maxHeight: '50%',
     backgroundColor: '#9DD08E',
     alignItems: 'baseline',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20
+  },
+  iphoneAd:{
+    width: 338,
+    height: 121,
+    marginTop: 20,
   },
   voltar: {
     width: 55,
@@ -164,8 +205,6 @@ const styles = StyleSheet.create({
   },
   fundo0: {
     alignItems: "center",
-    marginTop: 15,
-    marginLeft: -240,
     width: 100,
     height: 100,
     padding: 1,
@@ -174,9 +213,8 @@ const styles = StyleSheet.create({
   },
   fundo1: {
     alignItems: "center",
-    marginTop: -100,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 20,
+    marginRight: 20,
     width: 100,
     height: 100,
     padding: 1,
@@ -185,9 +223,6 @@ const styles = StyleSheet.create({
   },
   fundo2: {
     alignItems: "center",
-    marginTop: -100,
-    marginLeft: 250,
-    marginRight: 10,
     width: 100,
     height: 100,
     padding: 1,
@@ -288,5 +323,4 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter-SemiBold',
     marginLeft: 250,
   },
-
 })

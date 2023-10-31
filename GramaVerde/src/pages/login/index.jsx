@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, Image, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable'
 import { useFonts } from 'expo-font';
@@ -10,11 +10,12 @@ export default function Login() {
         'Inter-Bold': require('../../assets/fonts/Inter-Bold.ttf'),
         'Inter-ExtraBold': require('../../assets/fonts/Inter-ExtraBold.ttf'),
         'Inter-ExtraLight': require('../../assets/fonts/Inter-ExtraLight.ttf'),
+        'Inter-Medium': require('../../assets/fonts/Inter-Medium.ttf'),
         'Inter-Regular': require('../../assets/fonts/Inter-Regular.ttf'),
         'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
         'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
     });
-    return (
+    return(
         <View style={styles.container}>
             <Animatable.Image
                 animation="flipInY"
@@ -100,8 +101,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
     },
     img: {
-        width: '15%',
-        height: '6.85%',
+        width: 82,
+        height: 78,
         marginTop: 65
     },
     textobotao: {
@@ -110,16 +111,16 @@ const styles = StyleSheet.create({
         paddingLeft: 3,
         paddingBottom: 2,
         color: '#9DD08E',
-        fontFamily: 'Inter-ExtraBold'
+        fontFamily: 'Inter-Black'
     },
     textocadastro: {
         fontSize: 15,
         marginTop: 3,
-        fontFamily: 'Inter_Medium'
+        fontFamily: 'Inter-Black'
     },
     textocadastro2: {
         fontSize: 15,
         marginTop: 10,
-        fontFamily: 'Inter_Medium'
+        fontFamily: 'Inter-Black'
     }
 })

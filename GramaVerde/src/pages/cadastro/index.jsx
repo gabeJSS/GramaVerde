@@ -32,7 +32,7 @@ export default function Cadastro() {
                     placeholderTextColor={'#9DD08E'}
                 />
                 <TouchableOpacity style={styles.Botao}
-                    onPress={() => navigation.navigate('Perguntas0')}
+                    onPress={() => navigation.navigate('Main')}
                 >
                     <Text style={styles.textobotao}> Criar</Text>
                 </TouchableOpacity>
