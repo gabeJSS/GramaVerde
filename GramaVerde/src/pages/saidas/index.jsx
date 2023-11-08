@@ -81,6 +81,9 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
   },
+  lista:{
+
+  },
   saidasBtn: {
     backgroundColor: '#00AF04',
     paddingLeft: 60,
@@ -102,11 +105,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5
   },
-  lista:{
-   backgroundColor: '#61B648',
-   alignSelf: 'center',
-   marginTop: 100
-  },
+  
   saidasTxt: {
     marginRight: 30,
     fontSize: 30,

@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity, Linking, Button } from "react-native";
 import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
+import Number from "./number";
 
 export default function Main() {
   const saldo="0,96"
@@ -28,23 +29,10 @@ export default function Main() {
           source={require('../../assets/logo.png')}
           style={styles.imgLogo}
         />
-        <Text
-          style={styles.Titulo}
-        >
-          Próximo vencimento
-        </Text>
-        <Text
-          style={styles.proximaConta}>
-          (próxima conta)
-        </Text>
-        <Text
-          style={styles.validadeConta}>
-          {gastos}
-        </Text>
-        <Text
-          style={styles.saldo}>
-          {saldo}
-        </Text>
+        <View style={styles.Number}>
+          <Number/>
+        </View>
+        
       </View>
       <View
       style={styles.deLado}
@@ -318,11 +306,34 @@ const styles = StyleSheet.create({
     marginTop: 5,
     fontFamily: 'Inter-SemiBold'
   },
-  saldo: {
-    fontSize: 24,
-    color: '#3E3E3E',
-    marginTop: 10,
-    fontFamily: 'Inter-SemiBold',
-    marginLeft: 250,
+  row:{
+    flexDirection: 'row',
+    alignSelf: 'center',
+    justifyContent: 'center'
   },
+  saldoTxt:{
+    fontFamily: 'Inter-Medium',
+    fontSize: 24
+  },
+  saldo:{
+    color: '#08880B',
+    fontFamily: 'Inter-Medium',
+    fontSize: 24
+  },
+  gastos:{
+    color: '#ff0404',
+    fontFamily: 'Inter-Medium',
+    fontSize: 24
+  },
+  gastosTxt:{
+    fontFamily:'Inter-Medium',
+    fontSize: 24
+  },
+  viewGastos:{
+    marginLeft: 200
+  },
+  Number:{
+    alignSelf: 'center',
+    marginTop: 50
+  }
 })
