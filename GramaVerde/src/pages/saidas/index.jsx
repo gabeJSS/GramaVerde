@@ -5,29 +5,31 @@ import Movimentamento from "./movements";
 
 export default function Saidas() {
   const navigation = useNavigation()
+  
   const listaSaidas = [
     {
       id: 1,
       label: 'Conta de Água',
-      value: '129,38',
+      value: 129.38,
       date: "15/11/2023",
       type: 0 //saídas
     },
     {
       id: 2,
       label: 'Conta de Energia',
-      value: '184,21',
+      value: 184.21,
       date: "06/12/2023",
       type: 0 //saídas
     },
     {
       id: 3,
       label: 'Conta de Internet',
-      value: '109,90',
+      value: 109.9,
       date: "15/11/2023",
       type: 0 //saídas
-    },
+    }
   ]
+const soma = listaSaidas[0].value+listaSaidas[1].value
   return (
     <View
       style={styles.container}

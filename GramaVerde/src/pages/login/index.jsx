@@ -1,5 +1,5 @@
-import { useFonts } from 'expo-font';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable'
 
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     },
     img: {
         width: 82,
-        height: 78,
+        height: 80,
         marginTop: 65
     },
     textobotao: {

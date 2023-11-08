@@ -1,7 +1,9 @@
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { useFonts } from 'expo-font';
+import { useState } from "react";
 
 export default function Movimentamento({data}) {
+    const [showValue, setShowValue] = useState(false);
     const [fontsLoaded] = useFonts({
         'Inter-Black': require('../../assets/fonts/Inter-Black.ttf'),
         'Inter-Bold': require('../../assets/fonts/Inter-Bold.ttf'),
