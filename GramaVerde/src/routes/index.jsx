@@ -6,6 +6,7 @@ import Main from '../pages/main';
 import Saidas from '../pages/saidas';
 import Orcamento from '../pages/orcamento';
 import Entradas from '../pages/entradas';
+import Perfil from '../pages/perfil';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,11 @@ export default function Routes() {
         <Stack.Screen
           name="Entradas"
           component={Entradas}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

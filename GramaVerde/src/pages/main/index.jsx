@@ -4,6 +4,8 @@ import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Main() {
+  const saldo="0,96"
+  const gastos="523,74"
   const navigation = useNavigation()
   const [fontsLoaded] = useFonts({
     'Inter-Black': require('../../assets/fonts/Inter-Black.ttf'),
@@ -37,11 +39,11 @@ export default function Main() {
         </Text>
         <Text
           style={styles.validadeConta}>
-          (quando que a conta vence)
+          {gastos}
         </Text>
         <Text
           style={styles.saldo}>
-          (saldo aqui)
+          {saldo}
         </Text>
       </View>
       <View
@@ -141,7 +143,7 @@ export default function Main() {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.click2}
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('Perfil')}
       >
         <Image
           source={require('../../assets/config.png')}

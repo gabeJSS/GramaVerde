@@ -1,7 +1,7 @@
+import { useFonts } from 'expo-font';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable'
-import { useFonts } from 'expo-font';
 
 export default function Login() {
     const navigation = useNavigation()
@@ -14,7 +14,7 @@ export default function Login() {
         'Inter-Regular': require('../../assets/fonts/Inter-Regular.ttf'),
         'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
         'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
-    });
+      });
     return(
         <View style={styles.container}>
             <Animatable.Image

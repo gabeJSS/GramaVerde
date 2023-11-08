@@ -1,10 +1,33 @@
 import { View, Text, Image } from "react-native-animatable";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-
+import Movimentamento from "./movements";
 
 export default function Saidas() {
   const navigation = useNavigation()
+  const listaSaidas = [
+    {
+      id: 1,
+      label: 'Conta de Água',
+      value: '129,38',
+      date: "15/11/2023",
+      type: 0 //saídas
+    },
+    {
+      id: 2,
+      label: 'Conta de Energia',
+      value: '184,21',
+      date: "06/12/2023",
+      type: 0 //saídas
+    },
+    {
+      id: 3,
+      label: 'Conta de Internet',
+      value: '109,90',
+      date: "15/11/2023",
+      type: 0 //saídas
+    },
+  ]
   return (
     <View
       style={styles.container}
@@ -28,15 +51,14 @@ export default function Saidas() {
           >Saídas</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity
-        style={styles.click}
-        onPress={() => navigation.navigate('Main')}
-      >
-        <Image
-          source={require('../../assets/voltar.png')}
-          style={styles.voltar}
-        />
-      </TouchableOpacity>
+
+      <FlatList
+      style={styles.lista}
+      data={listaSaidas}
+      keyExtractor={(item) => String(item.id)}
+      showsVerticalScrollIndicator={false}
+      renderItem={ ({item}) => <Movimentamento data={item}/>}
+      />
     </View>
   )
 }
@@ -80,6 +102,11 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5
   },
+  lista:{
+   backgroundColor: '#61B648',
+   alignSelf: 'center',
+   marginTop: 100
+  },
   saidasTxt: {
     marginRight: 30,
     fontSize: 30,
@@ -104,12 +131,4 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginTop: 5
   },
-  click: {
-    marginTop: 550,
-    marginRight: 320
-  },
-  voltar: {
-    width: 55,
-    height: 55,
-  }
 })
