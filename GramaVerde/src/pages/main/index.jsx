@@ -1,9 +1,10 @@
 import { View, Text, Image } from "react-native-animatable";
-import { StyleSheet, TouchableOpacity, Linking, Button } from "react-native";
+import { StyleSheet, TouchableOpacity, Linking } from "react-native";
 import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import Number from "./number";
 import { listaSaidas } from "../../../App";
+import Objects from "./objects";
 
 export default function Main() {
   const saldo="0,96"
@@ -22,6 +23,7 @@ export default function Main() {
   return (
     <View
       style={styles.container}
+      animation="zoomIn"
     >
       <View
         style={styles.cabeçalho}
@@ -29,87 +31,14 @@ export default function Main() {
         <Image
           source={require('../../assets/logo.png')}
           style={styles.imgLogo}
+          animation="flipInX"
         />
         <View style={styles.Number}>
           <Number/>
         </View>
         
       </View>
-      <View
-      style={styles.deLado}
-      >
-      <TouchableOpacity
-        style={styles.fundo0}
-        onPress={() => navigation.navigate('Saidas')}
-      >
-        <View
-          style={styles.saidas}
-        >
-          <Image
-            source={require('../../assets/barcode.png')}
-            style={styles.barcode}
-          />
-          <Text
-            style={styles.textoSaida}
-          >
-            Saídas
-          </Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.fundo1}
-        onPress={() => navigation.navigate('Orcamento')}
-      >
-        <View
-          style={styles.saidas}
-        >
-          <Image
-            source={require('../../assets/cifrao.png')}
-            style={styles.cifrao}
-          />
-          <Text
-            style={styles.textoOrcamento}
-          >
-            Orçamento
-          </Text>
-        </View>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.fundo2}
-        onPress={() => navigation.navigate('Entradas')}
-      >
-        <View
-          style={styles.saidas}
-        >
-          <Image
-            source={require('../../assets/entrada.png')}
-            style={styles.subindo}
-          />
-          <Text
-            style={styles.textoEntrada}
-          >
-            Entradas
-          </Text>
-        </View>
-      </TouchableOpacity>
-      </View>
-      <TouchableOpacity
-        style={styles.fundo3}
-      >
-        <View
-          style={styles.projeto}
-        >
-          <Image
-            source={require('../../assets/notepad.png')}
-            style={styles.notepad}
-          />
-          <Text
-            style={styles.textoProjeto}
-          >
-            Projetos
-          </Text>
-        </View>
-      </TouchableOpacity>
+      <Objects/>
       <TouchableOpacity
       onPress={ ()=>{ Linking.openURL('https://www.iplace.com.br/apple-iphone-13-128gb-estelar-mlpg3br-a/220851?gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzolLQzHQEvUu83QwKYcD-Q0E2udEPBCPdzN6TVWAfcjMciyg_ch8XcaAuPvEALw_wcB')}}
       >

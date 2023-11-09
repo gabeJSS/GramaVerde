@@ -1,7 +1,9 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable'
+import { View } from "react-native-animatable";
+import Objects from '../main/objects';
 
 export default function Login() {
     const navigation = useNavigation()
@@ -16,9 +18,11 @@ export default function Login() {
         'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
       });
     return(
-        <View style={styles.container}>
+        <View style={styles.container}
+        animation="fadeIn"
+        >
             <Animatable.Image
-                animation="flipInY"
+                
                 source={require('../../assets/leaf.png')}
                 style={styles.img}
             />
