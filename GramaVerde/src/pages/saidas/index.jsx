@@ -2,6 +2,7 @@ import { View, Text, Image } from "react-native-animatable";
 import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Movimentamento from "./movements";
+import { batata } from "../../../App";
 
 export default function Saidas() {
   const navigation = useNavigation()
@@ -50,7 +51,7 @@ const soma = listaSaidas[0].value+listaSaidas[1].value
           />
           <Text
             style={styles.saidasTxt}
-          >Saídas</Text>
+          >{batata}</Text>
         </TouchableOpacity>
       </View>
 
