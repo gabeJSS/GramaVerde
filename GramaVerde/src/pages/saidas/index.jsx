@@ -3,34 +3,10 @@ import { FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Movimentamento from "./movements";
 import { batata } from "../../../App";
-
+import { listaSaidas } from "../../../App";
 export default function Saidas() {
   const navigation = useNavigation()
-  
-  const listaSaidas = [
-    {
-      id: 1,
-      label: 'Conta de Água',
-      value: 129.38,
-      date: "15/11/2023",
-      type: 0 //saídas
-    },
-    {
-      id: 2,
-      label: 'Conta de Energia',
-      value: 184.21,
-      date: "06/12/2023",
-      type: 0 //saídas
-    },
-    {
-      id: 3,
-      label: 'Conta de Internet',
-      value: 109.9,
-      date: "15/11/2023",
-      type: 0 //saídas
-    }
-  ]
-const soma = listaSaidas[0].value+listaSaidas[1].value
+  const soma = listaSaidas[0].value+listaSaidas[1].value
   return (
     <View
       style={styles.container}
@@ -51,7 +27,7 @@ const soma = listaSaidas[0].value+listaSaidas[1].value
           />
           <Text
             style={styles.saidasTxt}
-          >{batata}</Text>
+          >{soma}</Text>
         </TouchableOpacity>
       </View>
 

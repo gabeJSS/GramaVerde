@@ -1,5 +1,6 @@
 import { StyleSheet, TouchableOpacity, Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Soma_array from '../../functions/soma_array';
 
 export default function Perfil() {
     const navigation = useNavigation()
@@ -18,6 +19,7 @@ export default function Perfil() {
           source={require('../../assets/voltar.png')}
           style={styles.voltar}
         />
+        <Soma_array/>
       </TouchableOpacity>
             </View>
         </View>

@@ -3,10 +3,11 @@ import { StyleSheet, TouchableOpacity, Linking, Button } from "react-native";
 import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import Number from "./number";
+import { listaSaidas } from "../../../App";
 
 export default function Main() {
   const saldo="0,96"
-  const gastos="523,74"
+  const gastos= listaSaidas.values
   const navigation = useNavigation()
   const [fontsLoaded] = useFonts({
     'Inter-Black': require('../../assets/fonts/Inter-Black.ttf'),

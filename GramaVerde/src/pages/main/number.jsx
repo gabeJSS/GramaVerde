@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { listaSaidas } from "../../../App";
 
 export default function Number() {
     const saldo="0,96"
