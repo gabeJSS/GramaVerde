@@ -101,7 +101,6 @@ const FinanceManagerApp = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     backgroundColor: '#292832',
   },
   inputContainer: {
@@ -183,10 +182,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
-    marginTop: 20,
     alignSelf: 'center',
     backgroundColor: '#00AF04',
-    width: 300
+    width: 300,
+    flex: 1,
+    maxHeight: '50%',
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    backgroundColor: 'white',
+    elevation: 3, // Adiciona sombra (Android)
+    shadowColor: '#000', // Adiciona sombra (iOS)
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
   },
   modalContainer: {
     flex: 1,
