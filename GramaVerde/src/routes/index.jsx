@@ -2,11 +2,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native';
 import Login from '../pages/login';
 import Cadastro from '../pages/cadastro';
-import Main from '../pages/main';
-import Saidas from '../pages/saidas';
-import Orcamento from '../pages/orcamento';
+import Main from '../pages/main/index';
+import Saidas from '../pages/saidas/index';
+import Orcamento from '../pages/orcamento/index';
 import Entradas from '../pages/entradas';
 import Perfil from '../pages/perfil';
+import FinanceManagerApp from '../pages/projetos';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,11 @@ export default function Routes() {
         <Stack.Screen
           name="Perfil"
           component={Perfil}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Projetos"
+          component={FinanceManagerApp}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

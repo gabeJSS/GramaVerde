@@ -7,8 +7,8 @@ import { listaSaidas } from "../../../App";
 import Objects from "./objects";
 
 export default function Main() {
-  const saldo="0,96"
-  const gastos= listaSaidas.values
+  const saldo = "0,96"
+  const gastos = listaSaidas.values
   const navigation = useNavigation()
   const [fontsLoaded] = useFonts({
     'Inter-Black': require('../../assets/fonts/Inter-Black.ttf'),
@@ -34,40 +34,40 @@ export default function Main() {
           animation="flipInX"
         />
         <View style={styles.Number}>
-          <Number/>
+          <Number />
         </View>
-        
+
       </View>
-      <Objects/>
+      <Objects />
       <TouchableOpacity
-      onPress={ ()=>{ Linking.openURL('https://www.iplace.com.br/apple-iphone-13-128gb-estelar-mlpg3br-a/220851?gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzolLQzHQEvUu83QwKYcD-Q0E2udEPBCPdzN6TVWAfcjMciyg_ch8XcaAuPvEALw_wcB')}}
+        onPress={() => { Linking.openURL('https://www.iplace.com.br/apple-iphone-13-128gb-estelar-mlpg3br-a/220851?gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzolLQzHQEvUu83QwKYcD-Q0E2udEPBCPdzN6TVWAfcjMciyg_ch8XcaAuPvEALw_wcB') }}
       >
         <Image
-        source={require("../../assets/iphone.png")}
-        style={styles.iphoneAd}
+          source={require("../../assets/iphone.png")}
+          style={styles.iphoneAd}
         />
-        </TouchableOpacity>
-        <View
+      </TouchableOpacity>
+      <View
         style={styles.os2}
+      >
+        <TouchableOpacity
+          style={styles.click}
+          onPress={() => navigation.navigate('Login')}
         >
-      <TouchableOpacity
-        style={styles.click}
-        onPress={() => navigation.navigate('Login')}
-      >
-        <Image
-          source={require('../../assets/voltar.png')}
-          style={styles.voltar}
-        />
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.click2}
-        onPress={() => navigation.navigate('Perfil')}
-      >
-        <Image
-          source={require('../../assets/config.png')}
-          style={styles.voltar}
-        />
-      </TouchableOpacity>
+          <Image
+            source={require('../../assets/voltar.png')}
+            style={styles.voltar}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.click2}
+          onPress={() => navigation.navigate('Perfil')}
+        >
+          <Image
+            source={require('../../assets/config.png')}
+            style={styles.voltar}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -81,13 +81,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#292832',
     alignItems: 'center',
   },
-  deLado:{
+  deLado: {
     flexDirection: 'row',
     marginTop: 15,
   },
-  os2:{
+  os2: {
     flexDirection: 'row',
-    marginTop:200,
+    marginTop: 200,
     marginBottom: 15
   },
   click: {
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20
   },
-  iphoneAd:{
+  iphoneAd: {
     width: 338,
     height: 121,
     marginTop: 20,
@@ -236,33 +236,33 @@ const styles = StyleSheet.create({
     marginTop: 5,
     fontFamily: 'Inter-SemiBold'
   },
-  row:{
+  row: {
     flexDirection: 'row',
     alignSelf: 'center',
     justifyContent: 'center'
   },
-  saldoTxt:{
+  saldoTxt: {
     fontFamily: 'Inter-Medium',
     fontSize: 24
   },
-  saldo:{
+  saldo: {
     color: '#08880B',
     fontFamily: 'Inter-Medium',
     fontSize: 24
   },
-  gastos:{
+  gastos: {
     color: '#ff0404',
     fontFamily: 'Inter-Medium',
     fontSize: 24
   },
-  gastosTxt:{
-    fontFamily:'Inter-Medium',
+  gastosTxt: {
+    fontFamily: 'Inter-Medium',
     fontSize: 24
   },
-  viewGastos:{
+  viewGastos: {
     marginLeft: 200
   },
-  Number:{
+  Number: {
     alignSelf: 'center',
     marginTop: 50
   }

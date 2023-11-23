@@ -3,7 +3,8 @@ import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
 import * as Animatable from 'react-native-animatable'
 import { View } from "react-native-animatable";
-import Objects from '../main/objects';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 export default function Login() {
     const navigation = useNavigation()
@@ -16,13 +17,29 @@ export default function Login() {
         'Inter-Regular': require('../../assets/fonts/Inter-Regular.ttf'),
         'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf'),
         'Inter-Thin': require('../../assets/fonts/Inter-Thin.ttf'),
-      });
-    return(
+    });
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const enviarDadosParaBanco = async () => {
+        try {
+            const response = await axios.post('http://10.3.116.160:3333/customer', { name, email });
+            console.log('Dados enviados com sucesso:', response.data);
+        } catch (error) {
+            console.error('Erro ao enviar dados:', error);
+        }
+    };
+    const handleEntrarPress = () => {
+        // Chame a função para enviar dados aqui
+        enviarDadosParaBanco();
+        // Navegue para a tela 'Main' após o envio (você pode ajustar isso conforme necessário)
+        navigation.navigate('Main');
+    };
+    return (
         <View style={styles.container}
-        animation="fadeIn"
+            animation="fadeIn"
         >
             <Animatable.Image
-                
+
                 source={require('../../assets/leaf.png')}
                 style={styles.img}
             />
@@ -32,16 +49,18 @@ export default function Login() {
                 <TextInput
                     style={styles.containerInput}
                     placeholder='Email'
-                    placeholderTextColor={'#9DD08E'} />
+                    placeholderTextColor={'#9DD08E'}
+                    onChangeText={(text) => setEmail(text)} />
                 <TextInput
                     style={styles.containerInput}
                     placeholder='Senha'
                     placeholderTextColor={'#9DD08E'}
                     secureTextEntry={true}
                     maxLength={50}
+                    onChangeText={(text) => setName(text)}
                 />
                 <TouchableOpacity style={styles.Botao}
-                    onPress={() => navigation.navigate('Main')}>
+                    onPress={handleEntrarPress}>
                     <Text style={styles.textobotao}>Entrar</Text>
                 </TouchableOpacity>
                 <Text style={styles.textocadastro2}>Não tem uma conta?</Text>
