@@ -3,10 +3,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import Login from '../pages/login';
 import Cadastro from '../pages/cadastro';
 import Main from '../pages/main/index';
-import Saidas from '../pages/saidas/index';
 import Orcamento from '../pages/orcamento/index';
 import Entradas from '../pages/entradas';
 import Perfil from '../pages/perfil';
+import { Saidas } from '../pages/saidas';
 import FinanceManagerApp from '../pages/projetos';
 
 const Stack = createNativeStackNavigator();

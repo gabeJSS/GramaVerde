@@ -1,9 +1,6 @@
 import { View, Text, Image } from "react-native-animatable";
 import { StyleSheet, TouchableOpacity, Linking } from "react-native";
-import { useFonts } from 'expo-font';
 import { useNavigation } from '@react-navigation/native';
-import Number from "./number";
-import { listaSaidas } from "../../../App";
 
 export default function Objects() {
   const navigation = useNavigation()

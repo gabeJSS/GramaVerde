@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
+import { calculateTotal } from "../projetos";
 
 export default function Number() {
-  const saldo = "0,96"
   const gastos = "523,74"
   return (
     <View style={styles.container}>
       <View style={styles.row}>
         <View style={styles.viewSaldo}>
           <Text style={styles.saldoTxt}>Saldo:</Text>
-          <Text style={styles.saldo}>{saldo}</Text>
+          <Text style={styles.saldo}>{calculateTotal}</Text>
         </View>
         <View style={styles.viewGastos}>
           <Text style={styles.gastosTxt}>Gastos:</Text>

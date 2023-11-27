@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 
-export default function Saidas() {
+export default function Orcamento() {
   const navigation = useNavigation()
   const [fontsLoaded] = useFonts({
     'Inter-SemiBold': require('../../assets/fonts/Inter-SemiBold.ttf')

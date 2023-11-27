@@ -5,9 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 import Number from "./number";
 import { listaSaidas } from "../../../App";
 import Objects from "./objects";
+import { calculateTotal } from "../projetos";
 
 export default function Main() {
-  const saldo = "0,96"
+  const saldo = {calculateTotal}
   const gastos = listaSaidas.values
   const navigation = useNavigation()
   const [fontsLoaded] = useFonts({

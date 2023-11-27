@@ -22,7 +22,7 @@ export default function Login() {
     const [name, setName] = useState('');
     const enviarDadosParaBanco = async () => {
         try {
-            const response = await axios.post('http://10.3.116.160:3333/customer', { name, email });
+            const response = await axios.post('http://172.19.176.1:3333/customer', { name, email });
             console.log('Dados enviados com sucesso:', response.data);
         } catch (error) {
             console.error('Erro ao enviar dados:', error);
