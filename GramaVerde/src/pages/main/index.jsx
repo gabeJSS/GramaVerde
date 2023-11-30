@@ -6,6 +6,7 @@ import Number from "./number";
 import { listaSaidas } from "../../../App";
 import Objects from "./objects";
 import { calculateTotal } from "../projetos";
+import SeuComponente from "./gasto";
 
 export default function Main() {
   const saldo = {calculateTotal}
@@ -36,12 +37,13 @@ export default function Main() {
         />
         <View style={styles.Number}>
           <Number />
+          
         </View>
 
       </View>
       <Objects />
       <TouchableOpacity
-        onPress={() => { Linking.openURL('https://www.iplace.com.br/apple-iphone-13-128gb-estelar-mlpg3br-a/220851?gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzolLQzHQEvUu83QwKYcD-Q0E2udEPBCPdzN6TVWAfcjMciyg_ch8XcaAuPvEALw_wcB') }}
+        onPress={() => {Linking.openURL('https://www.iplace.com.br/apple-iphone-13-128gb-estelar-mlpg3br-a/220851?gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzolLQzHQEvUu83QwKYcD-Q0E2udEPBCPdzN6TVWAfcjMciyg_ch8XcaAuPvEALw_wcB') }}
       >
         <Image
           source={require("../../assets/iphone.png")}

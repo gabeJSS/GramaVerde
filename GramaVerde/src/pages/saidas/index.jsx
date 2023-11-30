@@ -1,6 +1,5 @@
-// AdicionarSaídaScreen.js
-
 import React, { useState, useEffect } from 'react';
+import { FontAwesome } from '@expo/vector-icons';
 import { View, Text, Button, TextInput, FlatList, Modal, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -42,7 +41,7 @@ export function Saidas() {
     try {
       await AsyncStorage.setItem('@MyApp:saidas', JSON.stringify(itemsToSave));
     } catch (error) {
-      console.error('Error saving items to AsyncStorage:', error);
+      console.error('deu merda, vê ai:', error);
     }
   };
 
@@ -79,16 +78,18 @@ export function Saidas() {
       <Modal visible={isModalVisible} animationType="slide" transparent={true}>
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <Button title="Fechar" onPress={() => setModalVisible(false)} />
+          <FontAwesome name="close" size={24} color="black" onPress={() => setModalVisible(false)} style={styles.fontmaravilhosa}/>
             <TextInput
               style={styles.input}
               placeholder="Nome"
+              placeholderTextColor={'#949399'}
               value={newItem.nome}
               onChangeText={(text) => setNewItem({ ...newItem, nome: text })}
             />
             <TextInput
               style={styles.input}
               placeholder="Valor (R$)"
+              placeholderTextColor={'#949399'}
               value={newItem.valor}
               onChangeText={(text) => setNewItem({ ...newItem, valor: text })}
               keyboardType="numeric"
@@ -96,11 +97,19 @@ export function Saidas() {
             <TextInput
               style={styles.input}
               placeholder="Data"
+              placeholderTextColor={'#949399'}
               value={newItem.data}
               onChangeText={(text) => setNewItem({ ...newItem, data: text })}
             />
-            <Button title="Adicionar" onPress={addItem} />
+            <TouchableOpacity
+                            onPress={addItem}
+                        >
+                            <Image
+                                source={require('../../assets/confirm.png')}
+                                style={styles.confirma}
 
+                            />
+                        </TouchableOpacity>
           </View>
         </View>
       </Modal>
@@ -139,11 +148,20 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontFamily: 'Inter-SemiBold'
   },
+  fontmaravilhosa:{
+    marginBottom:10,
+  },
   modalContainer: {
     flex: 1,
+    width: 300,
+    alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  confirma: {
+    width: 192,
+    height: 63
+},
   imgLogo: {
     width: 140,
     height: 20,
@@ -198,17 +216,18 @@ const styles = StyleSheet.create({
     marginRight: 40
   },
   modalContent: {
-    backgroundColor: 'white',
+    backgroundColor: '#292832',
+    width: '80%',
     padding: 20,
-    borderRadius: 10,
+    borderRadius: 30,
     elevation: 5,
+    borderColor: 'black',
+    borderWidth: 2
   },
   input: {
     marginBottom: 10,
     padding: 10,
     borderColor: 'gray',
-    borderWidth: 1,
-    borderRadius: 5,
   },
   title: {
     fontSize: 24,
@@ -227,7 +246,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: '#000',
     borderWidth: 2,
-    borderRadius: 5,
+    borderRadius: 10,
   },
   list: {
     marginTop: 10,

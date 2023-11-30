@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, FlatList, Modal, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, FlatList, Modal, StyleSheet, Image, Button, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -30,7 +30,7 @@ export default function Entradas() {
 
   const loadItemsFromStorage = async () => {
     try {
-      const storedItems = await AsyncStorage.getItem('@MyApp:items');
+      const storedItems = await AsyncStorage.getItem('@MyApp:entradas');
       if (storedItems !== null) {
         setItems(JSON.parse(storedItems));
       }
@@ -41,7 +41,7 @@ export default function Entradas() {
 
   const saveItemsToStorage = async (itemsToSave) => {
     try {
-      await AsyncStorage.setItem('@MyApp:items', JSON.stringify(itemsToSave));
+      await AsyncStorage.setItem('@MyApp:entradas', JSON.stringify(itemsToSave));
     } catch (error) {
       console.error('Error saving items to AsyncStorage:', error);
     }
@@ -137,6 +137,7 @@ export default function Entradas() {
                         <Text
                         style={styles.valorTxt}
                         >{`Valor: R$${item.valor}`}</Text>
+                        <Button title="Excluir" onPress={() => removeItem(index)} color="red" />
                     </View>
                 )}
                 style={styles.list}
@@ -179,7 +180,7 @@ const styles = StyleSheet.create({
         borderColor: '#000',
         borderWidth: 2,
         padding: 20,
-        borderRadius: 60,
+        borderRadius: 30,
         elevation: 5,
     },
     tituloTxt:{

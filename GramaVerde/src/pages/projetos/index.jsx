@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button, TextInput, FlatList, Modal, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import { FontAwesome } from '@expo/vector-icons';
 
 export function calculateTotal(items) {
   return items.reduce((total, item) => total + parseFloat(item.valor), 0).toFixed(2);
@@ -57,6 +57,7 @@ function AddItemScreen() {
 
   return (
     <View style={styles.container}>
+      
       <Button title="Adicionar Item" onPress={() => setModalVisible(true)} />
 
       <Modal visible={isModalVisible} animationType="slide" transparent={true}>
