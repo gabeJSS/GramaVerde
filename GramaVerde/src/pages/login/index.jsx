@@ -39,9 +39,9 @@ export default function Login() {
             animation="fadeIn"
         >
             <Animatable.Image
-
                 source={require('../../assets/leaf.png')}
                 style={styles.img}
+                animation="flipInX"
             />
             <View
                 style={styles.fundo}>

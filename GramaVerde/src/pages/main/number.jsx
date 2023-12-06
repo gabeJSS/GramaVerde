@@ -3,12 +3,13 @@ import { calculateTotal } from "../projetos";
 
 export default function Number() {
   const gastos = "523,74"
+  const saldo = "1296,4"
   return (
     <View style={styles.container}>
       <View style={styles.row}>
         <View style={styles.viewSaldo}>
           <Text style={styles.saldoTxt}>Saldo:</Text>
-          <Text style={styles.saldo}>{calculateTotal}</Text>
+          <Text style={styles.saldo}>R$ {saldo}</Text>
         </View>
         <View style={styles.viewGastos}>
           <Text style={styles.gastosTxt}>Gastos:</Text>

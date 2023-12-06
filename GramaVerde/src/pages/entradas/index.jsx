@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontFamily: 'Inter-SemiBold',
         alignSelf: 'center',
-        paddingLeft: 15, 
+        paddingLeft: 15
     },
     valorTxt:{
         fontSize:18,
@@ -258,7 +258,6 @@ const styles = StyleSheet.create({
     },
     listItem: {
         marginBottom: 10,
-        alignSelf: 'center',
         width: '60%',
         borderColor: '#ccc',
         backgroundColor: '#00AF04',

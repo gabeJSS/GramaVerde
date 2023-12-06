@@ -6,7 +6,6 @@ import Number from "./number";
 import { listaSaidas } from "../../../App";
 import Objects from "./objects";
 import { calculateTotal } from "../projetos";
-import SeuComponente from "./gasto";
 
 export default function Main() {
   const saldo = {calculateTotal}
